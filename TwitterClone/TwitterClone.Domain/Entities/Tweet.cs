@@ -1,12 +1,46 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace TwitterClone.Domain.Entities
 {
-    internal class Tweet
+    public class Tweet
     {
+        private Guid _id;
+        private Guid _authorId;
+        private string _content;
+        private DateTime _created;
+        private DateTime _updated;
+
+        public Guid Id
+        {
+            get { return _id; }
+        }
+
+        public Guid Author
+        {
+             get { return _authorId; }
+        }
+        public Guid AuthorId
+        {
+            get { return _authorId; }
+            set { _authorId = value; }
+        }
+
+        public string Content
+        {
+            get { return _content; }
+            set { _content = value; }
+        }
+
+        public DateTime Created
+        {
+            get { return _created; }
+            set { _created = value; }
+        }
+
+        public DateTime Updated
+        {
+            get { return _updated; }
+            set { _updated = value; }
+        }
+
     }
 }
