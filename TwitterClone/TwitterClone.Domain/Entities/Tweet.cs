@@ -9,15 +9,19 @@ namespace TwitterClone.Domain.Entities
         private DateTime _created;
         private DateTime _updated;
 
+        public Tweet()
+        {
+            _id = Guid.NewGuid();
+            _created = DateTime.UtcNow;
+            _updated = DateTime.UtcNow;
+        }
+
         public Guid Id
         {
             get { return _id; }
         }
+        
 
-        public Guid Author
-        {
-             get { return _authorId; }
-        }
         public Guid AuthorId
         {
             get { return _authorId; }
