@@ -17,6 +17,11 @@ namespace TwitterClone.Domain.Entities
         {
             this.SystemUserId = systemUserId;
             this.TargetUserId = targetUserId;
-        }   
+        }
+
+        public override string GetMessage()
+        {
+            return $"System notification for user with ID {this.TargetUserId}.";
+        }
     }
 }
