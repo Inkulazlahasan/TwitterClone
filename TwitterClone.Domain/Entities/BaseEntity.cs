@@ -19,6 +19,11 @@ namespace TwitterClone.Domain.Entities
         {
             return $"Base entity -> Id: {Id}, CreatedAt: {CreatedAt}, UpdateAt: {UpdateAt}, CreatedBy: {CreatedBy}, ModifiedBy: {ModifiedBy}";
         }
+
+        public bool CanBeLiked()
+        {
+            return true;
+        }
     }
 
 }
